@@ -47,7 +47,7 @@ const removeContact = async (contactId) => {
     try {
         const contacts = await listContacts();
         const index = contacts.findIndex(contact => contact.id === contactId)
-        if (index = -1) { 
+        if (index === -1) { 
             return null;
         }
         const [removeContact] = contacts.splice(index, 1);
