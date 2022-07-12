@@ -1,3 +1,4 @@
+const { Command } = require('commander');
 const contacts = require('./contacts');
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
@@ -19,9 +20,20 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
             console.log(removeContact);
             break;
         default:
-            console.error(`Error`);
+            console.warn('\x1B[31m Unknown action type!');
         
     }
 }
 
-invokeAction({action: 'add',name: 'Yulia', email: 'dsfsfd', phone: '34534'});
+const program = new Command();
+program
+    .option('-a, --action <type>', 'choose action')
+    .option('-i, --id <type>', 'user id')
+    .option('-n, --name <type>', 'user name')
+    .option('-e, --email <type>', 'user email')
+    .option('-p, --phone <type>', 'user phone');
+
+program.parse(process.argv);
+
+const argv = program.opts();
+invokeAction(argv);
