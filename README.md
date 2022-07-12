@@ -1,19 +1,19 @@
-# Получаем и выводим весь список контактов в виде таблицы (console.table)
+1. Получаем и выводим весь список контактов
 
 node index.js --a list
-https://ibb.co/MhmdhBv
+<a href="https://ibb.co/MhmdhBv"><img src="https://i.ibb.co/KGJnGKP/hw1-1.png" alt="hw1-1" border="0" /></a>
 
-# Получаем контакт по id
+2. Получаем контакт по id
 
 node index.js --a get --i 5
 https://ibb.co/9VQtvyn
 
-# Добавялем контакт
+3. Добавялем контакт
 
 node index.js --a add --n Mango --e mango@gmail.com --p 322-22-22
 https://ibb.co/VJG3HVc
 
-# Удаляем контакт
+4. Удаляем контакт
 
 node index.js --a remove --i=3
 https://ibb.co/5hV7BbX
